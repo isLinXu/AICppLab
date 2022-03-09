@@ -18,8 +18,7 @@ add_definitions(${PCL_DEFINITIONS})
 
 
 add_executable(AICppLab main.cpp
-        cv/Skeleton.h
-        utils/uhelper.h
+        CV/IMG_Helper.cpp
         )
 
 #目标链接库
