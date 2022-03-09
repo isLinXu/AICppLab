@@ -21,12 +21,19 @@ int main( )
     // 打印Opencv版本信息
     std::cout << "OpenCV version : " << CV_VERSION << std::endl;
 
-    string img_path = "lena_color.jpg";
+    string img_path = "lena.jpg";
     string file_name = "lena";
 
 
     //! 显示图片
     imageHelper::imshow_image(img_path, file_name);
+
+
+
+
+
+
+
 
 
 
