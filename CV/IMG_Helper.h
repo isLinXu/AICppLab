@@ -9,10 +9,15 @@
 #include <opencv2/highgui.hpp>
 #include <opencv2/imgcodecs.hpp>
 
+/**
+
+ */
+
+
 using namespace cv;
 using namespace std;
 
-class imageHelper {
+class ImageHelper {
 public:
     static int imshow_image(const string& img_path,const string& file_name);
 };

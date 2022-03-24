@@ -19,6 +19,8 @@ add_definitions(${PCL_DEFINITIONS})
 
 add_executable(AICppLab main.cpp
         CV/IMG_Helper.cpp
+        CV/Mat_Helper.cpp
+        CV/Draw_Shape_Heler.cpp
         )
 
 #目标链接库
