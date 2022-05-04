@@ -5,13 +5,17 @@
 #include <opencv2/imgproc/imgproc.hpp>
 #include <cstdio>
 
+#include<iostream>
+#include<string>
+#include<limits>
 
-
-#include "Learn/Skeleton.h"
+//#include "Learn/Skeleton.h"
 #include "CV/IMG_Helper.h"
 
 using namespace std;
 using namespace cv;
+
+
 
 
 void learn_test() {
@@ -92,37 +96,7 @@ void learn_test() {
 
 
 
-#include "CV/Draw_Shape_Heler.h"
 
-void draw(){
-
-    int w = 400;
-    char atom_window[] = "Drawing 1: Atom";
-    char rook_window[] = "Drawing 2: Rook";
-    Mat atom_image = Mat::zeros(w, w, CV_8UC3);
-    Mat rook_image = Mat::zeros(w, w, CV_8UC3);
-    DrawShapeHelper::drawEllipse(atom_image, 90);
-    DrawShapeHelper::drawEllipse(atom_image, 0);
-    DrawShapeHelper::drawEllipse(atom_image, 45);
-    DrawShapeHelper::drawEllipse(atom_image, -45);
-    DrawShapeHelper::drawFilledCircle(atom_image, Point(w / 2, w / 2));
-    DrawShapeHelper::drawPolygon(rook_image);
-    rectangle(rook_image,
-              Point(0, 7 * w / 8),
-              Point(w, w),
-              Scalar(0, 255, 255),
-              FILLED,
-              LINE_8);
-    DrawShapeHelper::drawLine(rook_image, Point(0, 15 * w / 16), Point(w, 15 * w / 16));
-    DrawShapeHelper::drawLine(rook_image, Point(w / 4, 7 * w / 8), Point(w / 4, w));
-    DrawShapeHelper::drawLine(rook_image, Point(w / 2, 7 * w / 8), Point(w / 2, w));
-    DrawShapeHelper::drawLine(rook_image, Point(3 * w / 4, 7 * w / 8), Point(3 * w / 4, w));
-    imshow(atom_window, atom_image);
-    moveWindow(atom_window, 0, 200);
-    imshow(rook_window, rook_image);
-    moveWindow(rook_window, w, 200);
-    waitKey(0);
-}
 
 
 
@@ -133,11 +107,7 @@ int main() {
     // 打印Opencv版本信息
     std::cout << "OpenCV version : " << CV_VERSION << std::endl;
 
-    string img_path = "lena.jpg";
-    string file_name = "lena";
 
-    //! 显示图片
-//    ImageHelper::imshow_image(img_path, file_name);
     Point pt1;
     pt1.x = 10;
     pt1.y = 8;
@@ -145,9 +115,20 @@ int main() {
     Point pt2 = Point(10, 8);
     cout << "pt1=>" << pt1 << "pt2=>" << pt2 << endl;
 
-    draw();
 
+    double score = 3.1415926;
+    cout<<"numeric_limits<unsigned short>::min()= "<<numeric_limits<unsigned short>::min()<<endl; //unsigned short的最小值
+    cout<<"numeric_limits<unsigned short>::max()= "<<numeric_limits<unsigned short>::max()<<endl;  //unsigned short的最大值
+    cout<<"numeric_limits<int>::min()= "<<numeric_limits<int>::min()<<endl; //int的最小值
+    cout<<"numeric_limits<int>::max()= "<<numeric_limits<int>::max()<<endl;  //int的最大值
+    cout<<"numeric_limits<short>::min()= "<<numeric_limits<short>::min()<<endl;
+    cout<<"numeric_limits<short>::max()= "<<numeric_limits<short>::max()<<endl;
+    cout<<"numeric_limits<double>::min()= "<<numeric_limits<double>::min()<<endl;
+    cout<<"numeric_limits<double>::max()= "<<numeric_limits<double>::max()<<endl;
 
+    cout<<"numeric_limits<int>::is_signed()= "<<numeric_limits<int>::is_signed<<endl;//是否有正负号
+    cout<<"numeric_limits<string>::is_specialized()= "<<numeric_limits<string>::is_specialized<<endl;//是否定义了数值极限
+    return 0;
 
 
     return 0;

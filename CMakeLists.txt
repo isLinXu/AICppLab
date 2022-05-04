@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.15)
-project(AICpplab)
+project(AICppLab)
 
 set(CMAKE_CXX_STANDARD 14)
 
@@ -21,6 +21,9 @@ add_executable(AICppLab main.cpp
         CV/IMG_Helper.cpp
         CV/Mat_Helper.cpp
         CV/Draw_Shape_Heler.cpp
+        CV/Point_Helper.cpp
+
+        RunManager.cpp
         )
 
 #目标链接库
