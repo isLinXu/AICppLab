@@ -23,6 +23,10 @@ add_executable(AICppLab main.cpp
         CV/Draw_Shape_Heler.cpp
         CV/Point_Helper.cpp
 
+        STL/Numeric_Helper.cpp
+        global.h
+
+
         RunManager.cpp
         )
 

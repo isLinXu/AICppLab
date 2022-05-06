@@ -11,6 +11,8 @@
 
 //#include "Learn/Skeleton.h"
 #include "CV/IMG_Helper.h"
+#include "RunManager.h"
+#include "STL/Numeric_Helper.h"
 
 using namespace std;
 using namespace cv;
@@ -107,29 +109,11 @@ int main() {
     // 打印Opencv版本信息
     std::cout << "OpenCV version : " << CV_VERSION << std::endl;
 
+    RunManager::testimshow();
 
-    Point pt1;
-    pt1.x = 10;
-    pt1.y = 8;
+    RunManager::drawDemo();
 
-    Point pt2 = Point(10, 8);
-    cout << "pt1=>" << pt1 << "pt2=>" << pt2 << endl;
-
-
-    double score = 3.1415926;
-    cout<<"numeric_limits<unsigned short>::min()= "<<numeric_limits<unsigned short>::min()<<endl; //unsigned short的最小值
-    cout<<"numeric_limits<unsigned short>::max()= "<<numeric_limits<unsigned short>::max()<<endl;  //unsigned short的最大值
-    cout<<"numeric_limits<int>::min()= "<<numeric_limits<int>::min()<<endl; //int的最小值
-    cout<<"numeric_limits<int>::max()= "<<numeric_limits<int>::max()<<endl;  //int的最大值
-    cout<<"numeric_limits<short>::min()= "<<numeric_limits<short>::min()<<endl;
-    cout<<"numeric_limits<short>::max()= "<<numeric_limits<short>::max()<<endl;
-    cout<<"numeric_limits<double>::min()= "<<numeric_limits<double>::min()<<endl;
-    cout<<"numeric_limits<double>::max()= "<<numeric_limits<double>::max()<<endl;
-
-    cout<<"numeric_limits<int>::is_signed()= "<<numeric_limits<int>::is_signed<<endl;//是否有正负号
-    cout<<"numeric_limits<string>::is_specialized()= "<<numeric_limits<string>::is_specialized<<endl;//是否定义了数值极限
-    return 0;
-
+    NumericHelper::numericTest();
 
     return 0;
 }
