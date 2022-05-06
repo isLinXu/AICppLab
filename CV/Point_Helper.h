@@ -12,8 +12,10 @@ using namespace cv;
 using namespace std;
 
 class PointHelper {
+public:
+    static int testPoint();
 
-    int testPoint();
+    static int learnPoint();
 };
 
 #endif //AICPPLAB_POINT_HELPER_H

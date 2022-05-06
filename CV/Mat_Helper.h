@@ -5,7 +5,12 @@
 #ifndef AICPPLAB_MAT_HELPER_H
 #define AICPPLAB_MAT_HELPER_H
 
+#include "../global.h"
 
+class matHelper {
+public:
+    static int matTest();
+};
 
 
 
