@@ -7,7 +7,7 @@
 #include "CV/IMG_Helper.h"
 
 int RunManager::testimshow() {
-    string img_path = "/home/linxu/CLionProjects/AICppLab/lena.jpg";
+    string img_path = "../lena.jpg";
     string file_name = "lena";
 
     //! 显示图片
