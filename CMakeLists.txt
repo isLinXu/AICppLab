@@ -10,7 +10,7 @@ find_package( OpenCV REQUIRED )
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 set(OpenCV_LIBS opencv_core opencv_imgproc opencv_highgui opencv_imgcodecs opencv_features2d opencv_photo opencv_video opencv_objdetect)
 
-find_package(PCL 1.2 REQUIRED)
+#find_package(PCL 1.2 REQUIRED)
 
 include_directories(${PCL_INCLUDE_DIRS})
 link_directories(${PCL_LIBRARY_DIRS})
@@ -32,7 +32,7 @@ add_executable(AICppLab main.cpp
 
 #目标链接库
 target_link_libraries( AICppLab
-        ${PCL_LIBRARIES}
+#        ${PCL_LIBRARIES}
         ${OpenCV_LIBS}
         ${CMAKE_THREAD_LIBS_INIT}
         )
